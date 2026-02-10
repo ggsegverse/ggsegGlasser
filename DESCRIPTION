@@ -1,34 +1,37 @@
 Package: ggsegGlasser
-Title: Glasser datasets for the ggseg-plotting tool
-Version: 1.0.01
-Authors@R: c(person("Athanasia Mo", "Mowinckel", 
-                    email = "a.m.mowinckel@psykologi.uio.no", 
+Title: Glasser Atlas for the 'ggseg' Ecosystem
+Version: 2.0.0
+Authors@R: c(person("Athanasia Mo", "Mowinckel",
+                    email = "a.m.mowinckel@psykologi.uio.no",
                     role = c("aut", "cre"),
                     comment = c(ORCID = "0000-0002-5756-0223")),
-            person("Didac", "Vidal-Piñeiro", 
-                    email = "d.v.pineiro@psykologi.uio.no", 
+            person("Didac", "Vidal-Piñeiro",
+                    email = "d.v.pineiro@psykologi.uio.no",
                     role = c("aut"),
                     comment = c(ORCID = "0000-0001-9997-9156")))
-Description: This is a support package for the ggseg, and ggseg3d packages.
-    It contains the Glasser atlases to plot using functions from those two packages.
+Description: Glasser multi-modal cortical parcellation (HCP) atlas for the
+    'ggseg' ecosystem. Provides a unified 'ggseg_atlas' object with 2D polygon
+    geometry for use with 'ggseg'.
 License: MIT + file LICENSE
 Encoding: UTF-8
-RoxygenNote: 7.1.1
-Depends: R (>= 2.10)
 LazyData: true
+Depends:
+    R (>= 3.5),
+    ggseg.formats
 Suggests:
     ggseg,
     ggseg3d,
     ggplot2,
-    tidyr,
     knitr,
     rmarkdown,
-    covr,
-    testthat (>= 2.1.0),
-    devtools
-VignetteBuilder: knitr
-Remotes: 
-    LCBC-UiO/ggseg,
-    LCBC-UiO/ggseg3d
-URL: https://github.com/LCBC-UiO/ggsegGlasser
-BugReports: https://github.com/LCBC-UiO/ggsegGlasser/issues
+    testthat (>= 3.0.0),
+    vdiffr
+Remotes:
+    ggseg/ggseg,
+    ggseg/ggseg3d,
+    ggseg/ggseg.formats
+URL: https://github.com/ggseg/ggsegGlasser
+BugReports: https://github.com/ggseg/ggsegGlasser/issues
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Config/testthat/edition: 3
