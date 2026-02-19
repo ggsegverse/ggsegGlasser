@@ -13,8 +13,8 @@ Glasser multi-modal cortical parcellation (HCP) atlas for the 'ggseg' ecosystem.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/ggseg/ggsegGlasser}
-  \item Report bugs at \url{https://github.com/ggseg/ggsegGlasser/issues}
+  \item \url{https://github.com/ggsegverse/ggsegGlasser}
+  \item Report bugs at \url{https://github.com/ggsegverse/ggsegGlasser/issues}
 }
 
 }

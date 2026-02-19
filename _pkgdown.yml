@@ -1,5 +1,17 @@
-destination: docs
-url: https://lcbc-uio.github.io/ggsegGlasser/
+url: https://ggsegverse.github.io/ggsegGlasser/
+
 template:
-  params:
-    bootswatch: cerulean
+  package: ggseg.docs
+
+navbar:
+  components:
+    github:
+      icon: fa-github
+      href: https://github.com/ggsegverse/ggsegGlasser
+      aria-label: GitHub
+
+reference:
+  - title: Atlases
+    desc: Brain atlases bundled in this package
+    contents:
+      - has_keyword("datasets")

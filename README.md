@@ -21,12 +21,12 @@ Glasser et al. (2016) Nature, volume 536, pages 171–178
 ## Installation
 
 We recommend installing the ggseg-atlases through the ggseg
-[r-universe](https://ggseg.r-universe.dev/ui#builds):
+[r-universe](https://ggsegverse.r-universe.dev/ui#builds):
 
 ``` r
 # Enable this universe
 options(repos = c(
-    ggseg = 'https://ggseg.r-universe.dev',
+    ggsegverse = 'https://ggsegverse.r-universe.dev',
     CRAN = 'https://cloud.r-project.org'))
 
 # Install some packages

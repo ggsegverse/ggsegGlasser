@@ -15,12 +15,13 @@
 # Run with: Rscript data-raw/make_atlas.R
 
 library(dplyr)
-library(ggsegExtra)
+library(ggseg.extra)
 library(ggseg.formats)
 
 Sys.setenv(FREESURFER_HOME = "/Applications/freesurfer/7.4.1")
 options(freesurfer.verbose = FALSE)
-future::plan(future::multisession(workers = 4))
+options(chromote.timeout = 120)
+future::plan(future::sequential)
 progressr::handlers("cli")
 progressr::handlers(global = TRUE)
 
@@ -37,21 +38,18 @@ for (f in annot_files) {
 
 cli::cli_h1("Creating glasser cortical atlas")
 
-atlas_raw <- create_cortical_atlas(
+atlas_raw <- create_cortical_from_annotation(
   input_annot = annot_files,
   atlas_name = "glasser",
   output_dir = "data-raw",
   tolerance = 1,
   smoothness = 2,
-  skip_existing = FALSE,
+  skip_existing = TRUE,
   cleanup = FALSE
 )
 
 atlas_raw <- atlas_raw |>
   atlas_region_contextual("^$", "label")
-
-atlas_raw <- atlas_raw |>
-  atlas_view_gather()
 
 glasser <- atlas_raw
 
