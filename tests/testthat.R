@@ -1,9 +1,4 @@
-
 library(testthat)
-library(ggplot2)
-library(ggseg)
-library(ggseg3d)
+library(ggsegGlasser)
 
 test_check("ggsegGlasser")
-
-# covr::zero_coverage(covr::package_coverage("."))
