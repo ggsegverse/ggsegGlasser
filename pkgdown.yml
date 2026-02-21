@@ -1,9 +1,8 @@
-pandoc: 2.7.3
-pkgdown: 1.6.1
+pandoc: 3.1.11
+pkgdown: 2.2.0
 pkgdown_sha: ~
 articles: {}
-last_built: 2021-11-15T09:04Z
+last_built: 2026-02-21T15:31Z
 urls:
-  reference: https://lcbc-uio.github.io/ggsegGlasser//reference
-  article: https://lcbc-uio.github.io/ggsegGlasser//articles
-
+  reference: https://ggsegverse.github.io/ggsegGlasser/reference
+  article: https://ggsegverse.github.io/ggsegGlasser/articles

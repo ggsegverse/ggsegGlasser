@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://lcbc-uio.github.io/ggsegGlasser//index.html</loc>
-  </url>
-  <url>
-    <loc>https://lcbc-uio.github.io/ggsegGlasser//reference/glasser.html</loc>
-  </url>
-  <url>
-    <loc>https://lcbc-uio.github.io/ggsegGlasser//reference/glasser_3d.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://ggsegverse.github.io/ggsegGlasser/404.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegGlasser/LICENSE-text.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegGlasser/LICENSE.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegGlasser/authors.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegGlasser/index.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegGlasser/news/index.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegGlasser/reference/ggsegGlasser-package.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegGlasser/reference/glasser.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegGlasser/reference/index.html</loc></url>
 </urlset>
+

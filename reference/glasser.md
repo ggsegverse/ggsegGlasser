@@ -1,0 +1,407 @@
+# Glasser Multi-Modal Cortical Parcellation (HCP)
+
+Brain atlas for the Glasser cortical parcellation with 361 regions based
+on the Human Connectome Project multi-modal parcellation. Contains 2D
+polygon geometry for
+[`ggseg::geom_brain()`](https://ggsegverse.github.io/ggseg/reference/ggbrain.html).
+
+## Usage
+
+``` r
+glasser()
+```
+
+## Value
+
+A
+[ggseg.formats::ggseg_atlas](https://ggsegverse.github.io/ggseg.formats/reference/ggseg_atlas.html)
+object (cortical).
+
+## References
+
+Glasser MF, Coalson TS, Robinson EC, Hacker CD, Harwell J, Yacoub E,
+Ugurbil K, Andersson J, Beckmann CF, Jenkinson M, Smith SM, Van Essen DC
+(2016). A multi-modal parcellation of human cerebral cortex. *Nature*,
+536(7615):171-178.
+[doi:10.1038/nature18933](https://doi.org/10.1038/nature18933)
+
+## Examples
+
+``` r
+glasser()
+#> 
+#> ── glasser ggseg atlas ─────────────────────────────────────────────────────────
+#> Type: cortical
+#> Regions: 361
+#> Hemispheres: left, right
+#> Views: inferior, lateral, medial, superior
+#> Palette: ✔
+#> Rendering: ✔ ggseg
+#> ✔ ggseg3d (vertices)
+#> ────────────────────────────────────────────────────────────────────────────────
+#> # A tibble: 362 × 3
+#>     hemi  region       label          
+#>     <chr> <chr>        <chr>          
+#>   1 left  L_V1_ROI     lh_L_V1_ROI    
+#>   2 left  L_MST_ROI    lh_L_MST_ROI   
+#>   3 left  L_V6_ROI     lh_L_V6_ROI    
+#>   4 left  L_V2_ROI     lh_L_V2_ROI    
+#>   5 left  L_V3_ROI     lh_L_V3_ROI    
+#>   6 left  L_V4_ROI     lh_L_V4_ROI    
+#>   7 left  L_V8_ROI     lh_L_V8_ROI    
+#>   8 left  L_4_ROI      lh_L_4_ROI     
+#>   9 left  L_3b_ROI     lh_L_3b_ROI    
+#>  10 left  L_FEF_ROI    lh_L_FEF_ROI   
+#>  11 left  L_PEF_ROI    lh_L_PEF_ROI   
+#>  12 left  L_55b_ROI    lh_L_55b_ROI   
+#>  13 left  L_V3A_ROI    lh_L_V3A_ROI   
+#>  14 left  L_RSC_ROI    lh_L_RSC_ROI   
+#>  15 left  L_POS2_ROI   lh_L_POS2_ROI  
+#>  16 left  L_V7_ROI     lh_L_V7_ROI    
+#>  17 left  L_IPS1_ROI   lh_L_IPS1_ROI  
+#>  18 left  L_FFC_ROI    lh_L_FFC_ROI   
+#>  19 left  L_V3B_ROI    lh_L_V3B_ROI   
+#>  20 left  L_LO1_ROI    lh_L_LO1_ROI   
+#>  21 left  L_LO2_ROI    lh_L_LO2_ROI   
+#>  22 left  L_PIT_ROI    lh_L_PIT_ROI   
+#>  23 left  L_MT_ROI     lh_L_MT_ROI    
+#>  24 left  L_A1_ROI     lh_L_A1_ROI    
+#>  25 left  L_PSL_ROI    lh_L_PSL_ROI   
+#>  26 left  L_SFL_ROI    lh_L_SFL_ROI   
+#>  27 left  L_PCV_ROI    lh_L_PCV_ROI   
+#>  28 left  L_STV_ROI    lh_L_STV_ROI   
+#>  29 left  L_7Pm_ROI    lh_L_7Pm_ROI   
+#>  30 left  L_7m_ROI     lh_L_7m_ROI    
+#>  31 left  L_POS1_ROI   lh_L_POS1_ROI  
+#>  32 left  L_23d_ROI    lh_L_23d_ROI   
+#>  33 left  L_v23ab_ROI  lh_L_v23ab_ROI 
+#>  34 left  L_d23ab_ROI  lh_L_d23ab_ROI 
+#>  35 left  L_31pv_ROI   lh_L_31pv_ROI  
+#>  36 left  L_5m_ROI     lh_L_5m_ROI    
+#>  37 left  L_5mv_ROI    lh_L_5mv_ROI   
+#>  38 left  L_23c_ROI    lh_L_23c_ROI   
+#>  39 left  L_5L_ROI     lh_L_5L_ROI    
+#>  40 left  L_24dd_ROI   lh_L_24dd_ROI  
+#>  41 left  L_24dv_ROI   lh_L_24dv_ROI  
+#>  42 left  L_7AL_ROI    lh_L_7AL_ROI   
+#>  43 left  L_SCEF_ROI   lh_L_SCEF_ROI  
+#>  44 left  L_6ma_ROI    lh_L_6ma_ROI   
+#>  45 left  L_7Am_ROI    lh_L_7Am_ROI   
+#>  46 left  L_7PL_ROI    lh_L_7PL_ROI   
+#>  47 left  L_7PC_ROI    lh_L_7PC_ROI   
+#>  48 left  L_LIPv_ROI   lh_L_LIPv_ROI  
+#>  49 left  L_VIP_ROI    lh_L_VIP_ROI   
+#>  50 left  L_MIP_ROI    lh_L_MIP_ROI   
+#>  51 left  L_1_ROI      lh_L_1_ROI     
+#>  52 left  L_2_ROI      lh_L_2_ROI     
+#>  53 left  L_3a_ROI     lh_L_3a_ROI    
+#>  54 left  L_6d_ROI     lh_L_6d_ROI    
+#>  55 left  L_6mp_ROI    lh_L_6mp_ROI   
+#>  56 left  L_6v_ROI     lh_L_6v_ROI    
+#>  57 left  L_p24pr_ROI  lh_L_p24pr_ROI 
+#>  58 left  L_33pr_ROI   lh_L_33pr_ROI  
+#>  59 left  L_a24pr_ROI  lh_L_a24pr_ROI 
+#>  60 left  L_p32pr_ROI  lh_L_p32pr_ROI 
+#>  61 left  L_a24_ROI    lh_L_a24_ROI   
+#>  62 left  L_d32_ROI    lh_L_d32_ROI   
+#>  63 left  L_8BM_ROI    lh_L_8BM_ROI   
+#>  64 left  L_p32_ROI    lh_L_p32_ROI   
+#>  65 left  L_10r_ROI    lh_L_10r_ROI   
+#>  66 left  L_47m_ROI    lh_L_47m_ROI   
+#>  67 left  L_8Av_ROI    lh_L_8Av_ROI   
+#>  68 left  L_8Ad_ROI    lh_L_8Ad_ROI   
+#>  69 left  L_9m_ROI     lh_L_9m_ROI    
+#>  70 left  L_8BL_ROI    lh_L_8BL_ROI   
+#>  71 left  L_9p_ROI     lh_L_9p_ROI    
+#>  72 left  L_10d_ROI    lh_L_10d_ROI   
+#>  73 left  L_8C_ROI     lh_L_8C_ROI    
+#>  74 left  L_44_ROI     lh_L_44_ROI    
+#>  75 left  L_45_ROI     lh_L_45_ROI    
+#>  76 left  L_47l_ROI    lh_L_47l_ROI   
+#>  77 left  L_a47r_ROI   lh_L_a47r_ROI  
+#>  78 left  L_6r_ROI     lh_L_6r_ROI    
+#>  79 left  L_IFJa_ROI   lh_L_IFJa_ROI  
+#>  80 left  L_IFJp_ROI   lh_L_IFJp_ROI  
+#>  81 left  L_IFSp_ROI   lh_L_IFSp_ROI  
+#>  82 left  L_IFSa_ROI   lh_L_IFSa_ROI  
+#>  83 left  L_p9-46v_ROI lh_L_p9-46v_ROI
+#>  84 left  L_46_ROI     lh_L_46_ROI    
+#>  85 left  L_a9-46v_ROI lh_L_a9-46v_ROI
+#>  86 left  L_9-46d_ROI  lh_L_9-46d_ROI 
+#>  87 left  L_9a_ROI     lh_L_9a_ROI    
+#>  88 left  L_10v_ROI    lh_L_10v_ROI   
+#>  89 left  L_a10p_ROI   lh_L_a10p_ROI  
+#>  90 left  L_10pp_ROI   lh_L_10pp_ROI  
+#>  91 left  L_11l_ROI    lh_L_11l_ROI   
+#>  92 left  L_13l_ROI    lh_L_13l_ROI   
+#>  93 left  L_OFC_ROI    lh_L_OFC_ROI   
+#>  94 left  L_47s_ROI    lh_L_47s_ROI   
+#>  95 left  L_LIPd_ROI   lh_L_LIPd_ROI  
+#>  96 left  L_6a_ROI     lh_L_6a_ROI    
+#>  97 left  L_i6-8_ROI   lh_L_i6-8_ROI  
+#>  98 left  L_s6-8_ROI   lh_L_s6-8_ROI  
+#>  99 left  L_43_ROI     lh_L_43_ROI    
+#> 100 left  L_OP4_ROI    lh_L_OP4_ROI   
+#> 101 left  L_OP1_ROI    lh_L_OP1_ROI   
+#> 102 left  L_OP2-3_ROI  lh_L_OP2-3_ROI 
+#> 103 left  L_52_ROI     lh_L_52_ROI    
+#> 104 left  L_RI_ROI     lh_L_RI_ROI    
+#> 105 left  L_PFcm_ROI   lh_L_PFcm_ROI  
+#> 106 left  L_PoI2_ROI   lh_L_PoI2_ROI  
+#> 107 left  L_TA2_ROI    lh_L_TA2_ROI   
+#> 108 left  L_FOP4_ROI   lh_L_FOP4_ROI  
+#> 109 left  L_MI_ROI     lh_L_MI_ROI    
+#> 110 left  L_Pir_ROI    lh_L_Pir_ROI   
+#> 111 left  L_AVI_ROI    lh_L_AVI_ROI   
+#> 112 left  L_AAIC_ROI   lh_L_AAIC_ROI  
+#> 113 left  L_FOP1_ROI   lh_L_FOP1_ROI  
+#> 114 left  L_FOP3_ROI   lh_L_FOP3_ROI  
+#> 115 left  L_FOP2_ROI   lh_L_FOP2_ROI  
+#> 116 left  L_PFt_ROI    lh_L_PFt_ROI   
+#> 117 left  L_AIP_ROI    lh_L_AIP_ROI   
+#> 118 left  L_EC_ROI     lh_L_EC_ROI    
+#> 119 left  L_PreS_ROI   lh_L_PreS_ROI  
+#> 120 left  L_H_ROI      lh_L_H_ROI     
+#> 121 left  L_ProS_ROI   lh_L_ProS_ROI  
+#> 122 left  L_PeEc_ROI   lh_L_PeEc_ROI  
+#> 123 left  L_STGa_ROI   lh_L_STGa_ROI  
+#> 124 left  L_PBelt_ROI  lh_L_PBelt_ROI 
+#> 125 left  L_A5_ROI     lh_L_A5_ROI    
+#> 126 left  L_PHA1_ROI   lh_L_PHA1_ROI  
+#> 127 left  L_PHA3_ROI   lh_L_PHA3_ROI  
+#> 128 left  L_STSda_ROI  lh_L_STSda_ROI 
+#> 129 left  L_STSdp_ROI  lh_L_STSdp_ROI 
+#> 130 left  L_STSvp_ROI  lh_L_STSvp_ROI 
+#> 131 left  L_TGd_ROI    lh_L_TGd_ROI   
+#> 132 left  L_TE1a_ROI   lh_L_TE1a_ROI  
+#> 133 left  L_TE1p_ROI   lh_L_TE1p_ROI  
+#> 134 left  L_TE2a_ROI   lh_L_TE2a_ROI  
+#> 135 left  L_TF_ROI     lh_L_TF_ROI    
+#> 136 left  L_TE2p_ROI   lh_L_TE2p_ROI  
+#> 137 left  L_PHT_ROI    lh_L_PHT_ROI   
+#> 138 left  L_PH_ROI     lh_L_PH_ROI    
+#> 139 left  L_TPOJ1_ROI  lh_L_TPOJ1_ROI 
+#> 140 left  L_TPOJ2_ROI  lh_L_TPOJ2_ROI 
+#> 141 left  L_TPOJ3_ROI  lh_L_TPOJ3_ROI 
+#> 142 left  L_DVT_ROI    lh_L_DVT_ROI   
+#> 143 left  L_PGp_ROI    lh_L_PGp_ROI   
+#> 144 left  L_IP2_ROI    lh_L_IP2_ROI   
+#> 145 left  L_IP1_ROI    lh_L_IP1_ROI   
+#> 146 left  L_IP0_ROI    lh_L_IP0_ROI   
+#> 147 left  L_PFop_ROI   lh_L_PFop_ROI  
+#> 148 left  L_PF_ROI     lh_L_PF_ROI    
+#> 149 left  L_PFm_ROI    lh_L_PFm_ROI   
+#> 150 left  L_PGi_ROI    lh_L_PGi_ROI   
+#> 151 left  L_PGs_ROI    lh_L_PGs_ROI   
+#> 152 left  L_V6A_ROI    lh_L_V6A_ROI   
+#> 153 left  L_VMV1_ROI   lh_L_VMV1_ROI  
+#> 154 left  L_VMV3_ROI   lh_L_VMV3_ROI  
+#> 155 left  L_PHA2_ROI   lh_L_PHA2_ROI  
+#> 156 left  L_V4t_ROI    lh_L_V4t_ROI   
+#> 157 left  L_FST_ROI    lh_L_FST_ROI   
+#> 158 left  L_V3CD_ROI   lh_L_V3CD_ROI  
+#> 159 left  L_LO3_ROI    lh_L_LO3_ROI   
+#> 160 left  L_VMV2_ROI   lh_L_VMV2_ROI  
+#> 161 left  L_31pd_ROI   lh_L_31pd_ROI  
+#> 162 left  L_31a_ROI    lh_L_31a_ROI   
+#> 163 left  L_VVC_ROI    lh_L_VVC_ROI   
+#> 164 left  L_25_ROI     lh_L_25_ROI    
+#> 165 left  L_s32_ROI    lh_L_s32_ROI   
+#> 166 left  L_pOFC_ROI   lh_L_pOFC_ROI  
+#> 167 left  L_PoI1_ROI   lh_L_PoI1_ROI  
+#> 168 left  L_Ig_ROI     lh_L_Ig_ROI    
+#> 169 left  L_FOP5_ROI   lh_L_FOP5_ROI  
+#> 170 left  L_p10p_ROI   lh_L_p10p_ROI  
+#> 171 left  L_p47r_ROI   lh_L_p47r_ROI  
+#> 172 left  L_TGv_ROI    lh_L_TGv_ROI   
+#> 173 left  L_MBelt_ROI  lh_L_MBelt_ROI 
+#> 174 left  L_LBelt_ROI  lh_L_LBelt_ROI 
+#> 175 left  L_A4_ROI     lh_L_A4_ROI    
+#> 176 left  L_STSva_ROI  lh_L_STSva_ROI 
+#> 177 left  L_TE1m_ROI   lh_L_TE1m_ROI  
+#> 178 left  L_PI_ROI     lh_L_PI_ROI    
+#> 179 left  L_a32pr_ROI  lh_L_a32pr_ROI 
+#> 180 left  L_p24_ROI    lh_L_p24_ROI   
+#> 181 left  unknown      lh_unknown     
+#> 182 right R_V1_ROI     rh_R_V1_ROI    
+#> 183 right R_MST_ROI    rh_R_MST_ROI   
+#> 184 right R_V6_ROI     rh_R_V6_ROI    
+#> 185 right R_V2_ROI     rh_R_V2_ROI    
+#> 186 right R_V3_ROI     rh_R_V3_ROI    
+#> 187 right R_V4_ROI     rh_R_V4_ROI    
+#> 188 right R_V8_ROI     rh_R_V8_ROI    
+#> 189 right R_4_ROI      rh_R_4_ROI     
+#> 190 right R_3b_ROI     rh_R_3b_ROI    
+#> 191 right R_FEF_ROI    rh_R_FEF_ROI   
+#> 192 right R_PEF_ROI    rh_R_PEF_ROI   
+#> 193 right R_55b_ROI    rh_R_55b_ROI   
+#> 194 right R_V3A_ROI    rh_R_V3A_ROI   
+#> 195 right R_RSC_ROI    rh_R_RSC_ROI   
+#> 196 right R_POS2_ROI   rh_R_POS2_ROI  
+#> 197 right R_V7_ROI     rh_R_V7_ROI    
+#> 198 right R_IPS1_ROI   rh_R_IPS1_ROI  
+#> 199 right R_FFC_ROI    rh_R_FFC_ROI   
+#> 200 right R_V3B_ROI    rh_R_V3B_ROI   
+#> 201 right R_LO1_ROI    rh_R_LO1_ROI   
+#> 202 right R_LO2_ROI    rh_R_LO2_ROI   
+#> 203 right R_PIT_ROI    rh_R_PIT_ROI   
+#> 204 right R_MT_ROI     rh_R_MT_ROI    
+#> 205 right R_A1_ROI     rh_R_A1_ROI    
+#> 206 right R_PSL_ROI    rh_R_PSL_ROI   
+#> 207 right R_SFL_ROI    rh_R_SFL_ROI   
+#> 208 right R_PCV_ROI    rh_R_PCV_ROI   
+#> 209 right R_STV_ROI    rh_R_STV_ROI   
+#> 210 right R_7Pm_ROI    rh_R_7Pm_ROI   
+#> 211 right R_7m_ROI     rh_R_7m_ROI    
+#> 212 right R_POS1_ROI   rh_R_POS1_ROI  
+#> 213 right R_23d_ROI    rh_R_23d_ROI   
+#> 214 right R_v23ab_ROI  rh_R_v23ab_ROI 
+#> 215 right R_d23ab_ROI  rh_R_d23ab_ROI 
+#> 216 right R_31pv_ROI   rh_R_31pv_ROI  
+#> 217 right R_5m_ROI     rh_R_5m_ROI    
+#> 218 right R_5mv_ROI    rh_R_5mv_ROI   
+#> 219 right R_23c_ROI    rh_R_23c_ROI   
+#> 220 right R_5L_ROI     rh_R_5L_ROI    
+#> 221 right R_24dd_ROI   rh_R_24dd_ROI  
+#> 222 right R_24dv_ROI   rh_R_24dv_ROI  
+#> 223 right R_7AL_ROI    rh_R_7AL_ROI   
+#> 224 right R_SCEF_ROI   rh_R_SCEF_ROI  
+#> 225 right R_6ma_ROI    rh_R_6ma_ROI   
+#> 226 right R_7Am_ROI    rh_R_7Am_ROI   
+#> 227 right R_7PL_ROI    rh_R_7PL_ROI   
+#> 228 right R_7PC_ROI    rh_R_7PC_ROI   
+#> 229 right R_LIPv_ROI   rh_R_LIPv_ROI  
+#> 230 right R_VIP_ROI    rh_R_VIP_ROI   
+#> 231 right R_MIP_ROI    rh_R_MIP_ROI   
+#> 232 right R_1_ROI      rh_R_1_ROI     
+#> 233 right R_2_ROI      rh_R_2_ROI     
+#> 234 right R_3a_ROI     rh_R_3a_ROI    
+#> 235 right R_6d_ROI     rh_R_6d_ROI    
+#> 236 right R_6mp_ROI    rh_R_6mp_ROI   
+#> 237 right R_6v_ROI     rh_R_6v_ROI    
+#> 238 right R_p24pr_ROI  rh_R_p24pr_ROI 
+#> 239 right R_33pr_ROI   rh_R_33pr_ROI  
+#> 240 right R_a24pr_ROI  rh_R_a24pr_ROI 
+#> 241 right R_p32pr_ROI  rh_R_p32pr_ROI 
+#> 242 right R_a24_ROI    rh_R_a24_ROI   
+#> 243 right R_d32_ROI    rh_R_d32_ROI   
+#> 244 right R_8BM_ROI    rh_R_8BM_ROI   
+#> 245 right R_p32_ROI    rh_R_p32_ROI   
+#> 246 right R_10r_ROI    rh_R_10r_ROI   
+#> 247 right R_47m_ROI    rh_R_47m_ROI   
+#> 248 right R_8Av_ROI    rh_R_8Av_ROI   
+#> 249 right R_8Ad_ROI    rh_R_8Ad_ROI   
+#> 250 right R_9m_ROI     rh_R_9m_ROI    
+#> 251 right R_8BL_ROI    rh_R_8BL_ROI   
+#> 252 right R_9p_ROI     rh_R_9p_ROI    
+#> 253 right R_10d_ROI    rh_R_10d_ROI   
+#> 254 right R_8C_ROI     rh_R_8C_ROI    
+#> 255 right R_44_ROI     rh_R_44_ROI    
+#> 256 right R_45_ROI     rh_R_45_ROI    
+#> 257 right R_47l_ROI    rh_R_47l_ROI   
+#> 258 right R_a47r_ROI   rh_R_a47r_ROI  
+#> 259 right R_6r_ROI     rh_R_6r_ROI    
+#> 260 right R_IFJa_ROI   rh_R_IFJa_ROI  
+#> 261 right R_IFJp_ROI   rh_R_IFJp_ROI  
+#> 262 right R_IFSp_ROI   rh_R_IFSp_ROI  
+#> 263 right R_IFSa_ROI   rh_R_IFSa_ROI  
+#> 264 right R_p9-46v_ROI rh_R_p9-46v_ROI
+#> 265 right R_46_ROI     rh_R_46_ROI    
+#> 266 right R_a9-46v_ROI rh_R_a9-46v_ROI
+#> 267 right R_9-46d_ROI  rh_R_9-46d_ROI 
+#> 268 right R_9a_ROI     rh_R_9a_ROI    
+#> 269 right R_10v_ROI    rh_R_10v_ROI   
+#> 270 right R_a10p_ROI   rh_R_a10p_ROI  
+#> 271 right R_10pp_ROI   rh_R_10pp_ROI  
+#> 272 right R_11l_ROI    rh_R_11l_ROI   
+#> 273 right R_13l_ROI    rh_R_13l_ROI   
+#> 274 right R_OFC_ROI    rh_R_OFC_ROI   
+#> 275 right R_47s_ROI    rh_R_47s_ROI   
+#> 276 right R_LIPd_ROI   rh_R_LIPd_ROI  
+#> 277 right R_6a_ROI     rh_R_6a_ROI    
+#> 278 right R_i6-8_ROI   rh_R_i6-8_ROI  
+#> 279 right R_s6-8_ROI   rh_R_s6-8_ROI  
+#> 280 right R_43_ROI     rh_R_43_ROI    
+#> 281 right R_OP4_ROI    rh_R_OP4_ROI   
+#> 282 right R_OP1_ROI    rh_R_OP1_ROI   
+#> 283 right R_OP2-3_ROI  rh_R_OP2-3_ROI 
+#> 284 right R_52_ROI     rh_R_52_ROI    
+#> 285 right R_RI_ROI     rh_R_RI_ROI    
+#> 286 right R_PFcm_ROI   rh_R_PFcm_ROI  
+#> 287 right R_PoI2_ROI   rh_R_PoI2_ROI  
+#> 288 right R_TA2_ROI    rh_R_TA2_ROI   
+#> 289 right R_FOP4_ROI   rh_R_FOP4_ROI  
+#> 290 right R_MI_ROI     rh_R_MI_ROI    
+#> 291 right R_Pir_ROI    rh_R_Pir_ROI   
+#> 292 right R_AVI_ROI    rh_R_AVI_ROI   
+#> 293 right R_AAIC_ROI   rh_R_AAIC_ROI  
+#> 294 right R_FOP1_ROI   rh_R_FOP1_ROI  
+#> 295 right R_FOP3_ROI   rh_R_FOP3_ROI  
+#> 296 right R_FOP2_ROI   rh_R_FOP2_ROI  
+#> 297 right R_PFt_ROI    rh_R_PFt_ROI   
+#> 298 right R_AIP_ROI    rh_R_AIP_ROI   
+#> 299 right R_EC_ROI     rh_R_EC_ROI    
+#> 300 right R_PreS_ROI   rh_R_PreS_ROI  
+#> 301 right R_H_ROI      rh_R_H_ROI     
+#> 302 right R_ProS_ROI   rh_R_ProS_ROI  
+#> 303 right R_PeEc_ROI   rh_R_PeEc_ROI  
+#> 304 right R_STGa_ROI   rh_R_STGa_ROI  
+#> 305 right R_PBelt_ROI  rh_R_PBelt_ROI 
+#> 306 right R_A5_ROI     rh_R_A5_ROI    
+#> 307 right R_PHA1_ROI   rh_R_PHA1_ROI  
+#> 308 right R_PHA3_ROI   rh_R_PHA3_ROI  
+#> 309 right R_STSda_ROI  rh_R_STSda_ROI 
+#> 310 right R_STSdp_ROI  rh_R_STSdp_ROI 
+#> 311 right R_STSvp_ROI  rh_R_STSvp_ROI 
+#> 312 right R_TGd_ROI    rh_R_TGd_ROI   
+#> 313 right R_TE1a_ROI   rh_R_TE1a_ROI  
+#> 314 right R_TE1p_ROI   rh_R_TE1p_ROI  
+#> 315 right R_TE2a_ROI   rh_R_TE2a_ROI  
+#> 316 right R_TF_ROI     rh_R_TF_ROI    
+#> 317 right R_TE2p_ROI   rh_R_TE2p_ROI  
+#> 318 right R_PHT_ROI    rh_R_PHT_ROI   
+#> 319 right R_PH_ROI     rh_R_PH_ROI    
+#> 320 right R_TPOJ1_ROI  rh_R_TPOJ1_ROI 
+#> 321 right R_TPOJ2_ROI  rh_R_TPOJ2_ROI 
+#> 322 right R_TPOJ3_ROI  rh_R_TPOJ3_ROI 
+#> 323 right R_DVT_ROI    rh_R_DVT_ROI   
+#> 324 right R_PGp_ROI    rh_R_PGp_ROI   
+#> 325 right R_IP2_ROI    rh_R_IP2_ROI   
+#> 326 right R_IP1_ROI    rh_R_IP1_ROI   
+#> 327 right R_IP0_ROI    rh_R_IP0_ROI   
+#> 328 right R_PFop_ROI   rh_R_PFop_ROI  
+#> 329 right R_PF_ROI     rh_R_PF_ROI    
+#> 330 right R_PFm_ROI    rh_R_PFm_ROI   
+#> 331 right R_PGi_ROI    rh_R_PGi_ROI   
+#> 332 right R_PGs_ROI    rh_R_PGs_ROI   
+#> 333 right R_V6A_ROI    rh_R_V6A_ROI   
+#> 334 right R_VMV1_ROI   rh_R_VMV1_ROI  
+#> 335 right R_VMV3_ROI   rh_R_VMV3_ROI  
+#> 336 right R_PHA2_ROI   rh_R_PHA2_ROI  
+#> 337 right R_V4t_ROI    rh_R_V4t_ROI   
+#> 338 right R_FST_ROI    rh_R_FST_ROI   
+#> 339 right R_V3CD_ROI   rh_R_V3CD_ROI  
+#> 340 right R_LO3_ROI    rh_R_LO3_ROI   
+#> 341 right R_VMV2_ROI   rh_R_VMV2_ROI  
+#> 342 right R_31pd_ROI   rh_R_31pd_ROI  
+#> 343 right R_31a_ROI    rh_R_31a_ROI   
+#> 344 right R_VVC_ROI    rh_R_VVC_ROI   
+#> 345 right R_25_ROI     rh_R_25_ROI    
+#> 346 right R_s32_ROI    rh_R_s32_ROI   
+#> 347 right R_pOFC_ROI   rh_R_pOFC_ROI  
+#> 348 right R_PoI1_ROI   rh_R_PoI1_ROI  
+#> 349 right R_Ig_ROI     rh_R_Ig_ROI    
+#> 350 right R_FOP5_ROI   rh_R_FOP5_ROI  
+#> 351 right R_p10p_ROI   rh_R_p10p_ROI  
+#> 352 right R_p47r_ROI   rh_R_p47r_ROI  
+#> 353 right R_TGv_ROI    rh_R_TGv_ROI   
+#> 354 right R_MBelt_ROI  rh_R_MBelt_ROI 
+#> 355 right R_LBelt_ROI  rh_R_LBelt_ROI 
+#> 356 right R_A4_ROI     rh_R_A4_ROI    
+#> 357 right R_STSva_ROI  rh_R_STSva_ROI 
+#> 358 right R_TE1m_ROI   rh_R_TE1m_ROI  
+#> 359 right R_PI_ROI     rh_R_PI_ROI    
+#> 360 right R_a32pr_ROI  rh_R_a32pr_ROI 
+#> 361 right R_p24_ROI    rh_R_p24_ROI   
+#> 362 right unknown      rh_unknown     
+```
