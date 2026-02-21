@@ -64,7 +64,7 @@ library(ggsegGlasser)
 library(ggseg)
 library(ggplot2)
 
-plot(glasser) +
+plot(glasser()) +
   theme(legend.position = "bottom",
         legend.text = element_text(size = 9)) +
   guides(fill = guide_legend(ncol = 7))
@@ -75,7 +75,7 @@ plot(glasser) +
 library(ggseg3d)
 library(dplyr)
 
-ggseg3d(atlas = glasser_3d) %>% 
+ggseg3d(atlas = glasser()) %>% 
   pan_camera("right lateral")
 ```
 
@@ -84,7 +84,7 @@ library(ggseg3d)
 library(dplyr)
 
 
-p <- ggseg3d(atlas = glasser_3d) %>%
+p <- ggseg3d(atlas = glasser()) %>%
   pan_camera("right lateral") %>%
   plotly::add_annotations( text="Screen capture",
                   legendtitle=TRUE, showarrow=FALSE,

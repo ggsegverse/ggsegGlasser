@@ -4,10 +4,6 @@
 #' based on the Human Connectome Project multi-modal parcellation.
 #' Contains 2D polygon geometry for [ggseg::geom_brain()].
 #'
-#' @docType data
-#' @name glasser
-#' @usage data(glasser)
-#' @keywords datasets
 #' @family ggseg_atlases
 #'
 #' @references Glasser MF, Coalson TS, Robinson EC, Hacker CD, Harwell J,
@@ -16,8 +12,8 @@
 #'   *Nature*, 536(7615):171-178.
 #'   \doi{10.1038/nature18933}
 #'
-#' @format A [ggseg.formats::ggseg_atlas] object (cortical).
+#' @return A [ggseg.formats::ggseg_atlas] object (cortical).
+#' @export
 #' @examples
-#' data(glasser)
-#' glasser
-"glasser"
+#' glasser()
+glasser <- function() .glasser
