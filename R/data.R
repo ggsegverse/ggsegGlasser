@@ -13,6 +13,7 @@
 #'   \doi{10.1038/nature18933}
 #'
 #' @return A [ggseg.formats::ggseg_atlas] object (cortical).
+#' @import ggseg.formats
 #' @export
 #' @examples
 #' glasser()
