@@ -1,0 +1,113 @@
+---
+format: gfm
+---
+
+<!-- README.md is generated from README.qmd. Please edit that file -->
+
+```{r}
+#| label: setup
+#| include: false
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  fig.width = 10,
+  out.width = "100%",
+  fig.retina = 3
+)
+```
+
+# ggsegGlasser <img src='man/figures/logo.png' align="right" height="138.5" />
+
+<!-- badges: start -->
+[![DOI](https://zenodo.org/badge/250278991.svg)](https://zenodo.org/badge/latestdoi/250278991)
+[![CRAN status](https://www.r-pkg.org/badges/version/ggsegGlasser)](https://CRAN.R-project.org/package=ggsegGlasser)
+[![R-CMD-check](https://github.com/ggseg/ggsegGlasser/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ggseg/ggsegGlasser/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
+This repository contains an R package with atlas data for ggseg and ggseg3d for the Glasser parcellation for HPC.
+
+Glasser et al. (2016) Nature, volume 536, pages 171-178 [pubmed](https://www.nature.com/articles/nature18933)
+
+To learn how to use these atlases, please look at the documentation for
+[ggseg](https://ggseg.github.io/ggseg/) and
+[ggseg3d](https://ggseg.github.io/ggseg3d).
+
+## Installation
+
+We recommend installing the ggseg-atlases through the ggseg [r-universe](https://ggseg.r-universe.dev/ui#builds):
+
+```{r}
+#| label: install-r-universe
+#| eval: false
+options(repos = c(
+  ggseg = "https://ggseg.r-universe.dev",
+  CRAN = "https://cloud.r-project.org"
+))
+
+install.packages("ggsegGlasser")
+```
+
+You can install the released version of ggsegGlasser from [CRAN](https://CRAN.R-project.org) with:
+
+```r
+install.packages("ggsegGlasser")
+```
+
+And the development version from [GitHub](https://github.com/) with:
+
+```r
+# install.packages("remotes")
+remotes::install_github("ggseg/ggsegGlasser")
+```
+
+## Example
+
+```{r}
+#| label: 2d-plot
+#| fig-height: 8
+library(ggseg)
+library(ggsegGlasser)
+library(ggplot2)
+
+ggplot() +
+  geom_brain(
+    atlas = glasser(),
+    mapping = aes(fill = label),
+    position = position_brain(hemi ~ view),
+    show.legend = FALSE
+  ) +
+  scale_fill_manual(values = glasser()$palette, na.value = "grey") +
+  theme_void()
+```
+
+```{r}
+#| label: 3d-example
+#| eval: false
+library(ggseg3d)
+
+ggseg3d(atlas = glasser()) |>
+  pan_camera("right lateral")
+```
+
+```{r}
+#| label: 3d-snapshot
+#| include: false
+#| eval: !expr file.exists(Sys.which("chrome")) || file.exists(Sys.which("chromium"))
+library(ggseg3d)
+
+ggseg3d(atlas = glasser()) |>
+  pan_camera("right lateral") |>
+  snapshot_brain("man/figures/README-3d-plot.png")
+```
+
+```{r}
+#| label: 3d-include
+#| echo: false
+#| eval: !expr file.exists("man/figures/README-3d-plot.png")
+knitr::include_graphics("man/figures/README-3d-plot.png")
+```
+
+Please note that the 'ggsegGlasser' project is released with a
+[Contributor Code of Conduct](CODE_OF_CONDUCT.md).
+By contributing to this project, you agree to abide by its terms.
