@@ -1,36 +1,39 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+<!-- README.md is generated from README.qmd. Please edit that file -->
 
 # ggsegGlasser <img src='man/figures/logo.png' align="right" height="138.5" />
 
 <!-- badges: start -->
 
-[![R build
-status](https://github.com/LCBC-UiO/ggsegGlasser/workflows/R-CMD-check/badge.svg)](https://github.com/LCBC-UiO/ggsegGlasser/actions)
 [![DOI](https://zenodo.org/badge/250278991.svg)](https://zenodo.org/badge/latestdoi/250278991)
 [![CRAN
-status](https://www.r-pkg.org/badges/version/ggsegGlasser)](https://CRAN.R-project.org/package=ggsegGlasser)
+status](https://www.r-pkg.org/badges/version/ggsegGlasser.png)](https://CRAN.R-project.org/package=ggsegGlasser)
+[![R-CMD-check](https://github.com/ggseg/ggsegGlasser/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ggseg/ggsegGlasser/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 This repository contains an R package with atlas data for ggseg and
 ggseg3d for the Glasser parcellation for HPC.
 
-Glasser et al. (2016) Nature, volume 536, pages 171–178
+Glasser et al. (2016) Nature, volume 536, pages 171-178
 [pubmed](https://www.nature.com/articles/nature18933)
+
+To learn how to use these atlases, please look at the documentation for
+[ggseg](https://ggseg.github.io/ggseg/) and
+[ggseg3d](https://ggseg.github.io/ggseg3d).
 
 ## Installation
 
 We recommend installing the ggseg-atlases through the ggseg
-[r-universe](https://ggsegverse.r-universe.dev/ui#builds):
+[r-universe](https://ggseg.r-universe.dev/ui#builds):
 
 ``` r
-# Enable this universe
 options(repos = c(
-    ggsegverse = 'https://ggsegverse.r-universe.dev',
-    CRAN = 'https://cloud.r-project.org'))
+  ggseg = "https://ggseg.r-universe.dev",
+  CRAN = "https://cloud.r-project.org"
+))
 
-# Install some packages
-install.packages('ggsegGlasser')
+install.packages("ggsegGlasser")
 ```
 
 You can install the released version of ggsegGlasser from
@@ -43,41 +46,38 @@ install.packages("ggsegGlasser")
 And the development version from [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("LCBC-UiO/ggsegGlasser")
+# install.packages("remotes")
+remotes::install_github("ggseg/ggsegGlasser")
 ```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-library(ggsegGlasser)
-```
-
 ``` r
 library(ggseg)
-#> Warning: package 'ggseg' was built under R version 4.1.1
-#> Loading required package: ggplot2
+library(ggsegGlasser)
 library(ggplot2)
 
-plot(glasser) +
-  theme(legend.position = "bottom",
-        legend.text = element_text(size = 9)) +
-  guides(fill = guide_legend(ncol = 7))
+ggplot() +
+  geom_brain(
+    atlas = glasser(),
+    mapping = aes(fill = label),
+    position = position_brain(hemi ~ view),
+    show.legend = FALSE
+  ) +
+  scale_fill_manual(values = glasser()$palette, na.value = "grey") +
+  theme_void()
 ```
 
-<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
+<img src="man/figures/README-2d-plot-1.png" style="width:100.0%" />
 
 ``` r
 library(ggseg3d)
-library(dplyr)
 
-ggseg3d(atlas = glasser_3d) %>% 
+ggseg3d(atlas = glasser()) |>
   pan_camera("right lateral")
 ```
 
-<img src="man/figures/README-3d-plot.png" width="100%" />
+<img src="man/figures/README-3d-plot.png" style="width:100.0%" />
 
 Please note that the ‘ggsegGlasser’ project is released with a
 [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to
