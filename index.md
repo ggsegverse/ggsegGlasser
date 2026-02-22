@@ -3,22 +3,25 @@
 This repository contains an R package with atlas data for ggseg and
 ggseg3d for the Glasser parcellation for HPC.
 
-Glasser et al. (2016) Nature, volume 536, pages 171–178
+Glasser et al. (2016) Nature, volume 536, pages 171-178
 [pubmed](https://www.nature.com/articles/nature18933)
+
+To learn how to use these atlases, please look at the documentation for
+[ggseg](https://ggseg.github.io/ggseg/) and
+[ggseg3d](https://ggseg.github.io/ggseg3d).
 
 ## Installation
 
 We recommend installing the ggseg-atlases through the ggseg
-[r-universe](https://ggsegverse.r-universe.dev/ui#builds):
+[r-universe](https://ggseg.r-universe.dev/ui#builds):
 
 ``` r
-# Enable this universe
 options(repos = c(
-    ggsegverse = 'https://ggsegverse.r-universe.dev',
-    CRAN = 'https://cloud.r-project.org'))
+  ggseg = "https://ggseg.r-universe.dev",
+  CRAN = "https://cloud.r-project.org"
+))
 
-# Install some packages
-install.packages('ggsegGlasser')
+install.packages("ggsegGlasser")
 ```
 
 You can install the released version of ggsegGlasser from
@@ -31,37 +34,34 @@ install.packages("ggsegGlasser")
 And the development version from [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("LCBC-UiO/ggsegGlasser")
+# install.packages("remotes")
+remotes::install_github("ggseg/ggsegGlasser")
 ```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-library(ggsegGlasser)
-```
-
 ``` r
 library(ggseg)
-#> Warning: package 'ggseg' was built under R version 4.1.1
-#> Loading required package: ggplot2
+library(ggsegGlasser)
 library(ggplot2)
 
-plot(glasser) +
-  theme(legend.position = "bottom",
-        legend.text = element_text(size = 9)) +
-  guides(fill = guide_legend(ncol = 7))
+ggplot() +
+  geom_brain(
+    atlas = glasser(),
+    mapping = aes(fill = label),
+    position = position_brain(hemi ~ view),
+    show.legend = FALSE
+  ) +
+  scale_fill_manual(values = glasser()$palette, na.value = "grey") +
+  theme_void()
 ```
 
-![](reference/figures/README-unnamed-chunk-4-1.png)
+![](reference/figures/README-2d-plot-1.png)
 
 ``` r
 library(ggseg3d)
-library(dplyr)
 
-ggseg3d(atlas = glasser_3d) %>% 
+ggseg3d(atlas = glasser()) |>
   pan_camera("right lateral")
 ```
 
