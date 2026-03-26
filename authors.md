@@ -14,13 +14,13 @@ Source:
 [`DESCRIPTION`](https://github.com/ggsegverse/ggsegGlasser/blob/main/DESCRIPTION)
 
 Mowinckel A, Vidal-Piñeiro D (2026). *ggsegGlasser: Glasser Atlas for
-the 'ggseg' Ecosystem*. R package version 2.0.0,
+the 'ggseg' Ecosystem*. R package version 2.0.1,
 <https://github.com/ggsegverse/ggsegGlasser>.
 
     @Manual{,
       title = {ggsegGlasser: Glasser Atlas for the 'ggseg' Ecosystem},
       author = {Athanasia Mo Mowinckel and Didac Vidal-Piñeiro},
       year = {2026},
-      note = {R package version 2.0.0},
+      note = {R package version 2.0.1},
       url = {https://github.com/ggsegverse/ggsegGlasser},
     }
