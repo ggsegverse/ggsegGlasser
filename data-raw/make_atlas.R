@@ -42,7 +42,7 @@ plot(glasser)
 
 .glasser <- glasser
 usethis::use_data(
-  glasser,
+  .glasser,
   overwrite = TRUE,
   compress = "xz",
   internal = TRUE
