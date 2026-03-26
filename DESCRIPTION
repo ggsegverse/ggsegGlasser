@@ -1,5 +1,5 @@
 Package: ggsegGlasser
-Title: Glasser Atlas for the 'ggseg' Ecosystem
+Title: Glasser Atlas for the 'ggsegverse' Ecosystem
 Version: 2.0.2
 Authors@R: c(person("Athanasia Mo", "Mowinckel",
                     email = "a.m.mowinckel@psykologi.uio.no",
