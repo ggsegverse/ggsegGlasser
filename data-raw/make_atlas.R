@@ -32,7 +32,7 @@ glasser <- create_cortical_from_annotation(
   skip_existing = TRUE,
   cleanup = FALSE
 ) |>
-  atlas_region_contextual("^$", "label")
+  atlas_region_contextual("^$|unknown", "label")
 
 glasser$core$region <- gsub("^[LR]_", "", glasser$core$region) |>
   gsub("_ROI$", "", x = _)
