@@ -1,10 +1,21 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
 
 # ggsegGlasser
 
 <!-- badges: start -->
-
 [![R-CMD-check](https://github.com/ggsegverse/ggsegGlasser/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ggsegverse/ggsegGlasser/actions/workflows/R-CMD-check.yaml)
 [![r-universe](https://ggsegverse.r-universe.dev/badges/ggsegGlasser)](https://ggsegverse.r-universe.dev/ggsegGlasser)
 <!-- badges: end -->
@@ -13,7 +24,7 @@ Glasser Atlas for the ggsegverse Ecosystem.
 
 ## Installation
 
-``` r
+```{r, eval = FALSE}
 # From r-universe
 install.packages("ggsegGlasser", repos = "https://ggsegverse.r-universe.dev")
 
@@ -23,22 +34,18 @@ remotes::install_github("ggsegverse/ggsegGlasser")
 ```
 
 ## Atlases
-
 ### glasser
-
+ 
 HCP Multi-Modal Parcellation with 180 regions per hemisphere.
 
-``` r
+```{r glasser}
 library(ggsegGlasser)
 plot(glasser())
 ```
-
-<img src="man/figures/README-glasser-1.png" alt="" width="100%" /> \##
-Data source
+## Data source
 
 HCP-MMP1 annotation files (fsaverage space, resampled to fsaverage5).
 
-- **Reference**: Glasser et al. (2016)
-  [doi:10.1038/nature18933](https://doi.org/10.1038/nature18933)
+- **Reference**: Glasser et al. (2016) [doi:10.1038/nature18933](https://doi.org/10.1038/nature18933)
 
 - **Date obtained**: 2020-11-18
