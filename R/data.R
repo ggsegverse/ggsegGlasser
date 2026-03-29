@@ -17,4 +17,5 @@
 #' @export
 #' @examples
 #' glasser()
+#' plot(glasser())
 glasser <- function() .glasser
