@@ -5,6 +5,7 @@
 #' Contains 2D polygon geometry for [ggseg::geom_brain()].
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Glasser MF, Coalson TS, Robinson EC, Hacker CD, Harwell J,
 #'   Yacoub E, Ugurbil K, Andersson J, Beckmann CF, Jenkinson M, Smith SM,
