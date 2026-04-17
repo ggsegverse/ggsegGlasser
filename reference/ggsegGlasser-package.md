@@ -1,4 +1,4 @@
-# ggsegGlasser: Glasser Atlas for the 'ggseg' Ecosystem
+# ggsegGlasser: Glasser Atlas for the 'ggsegverse' Ecosystem
 
 Glasser multi-modal cortical parcellation (HCP) atlas for the 'ggseg'
 ecosystem. Provides a unified 'ggseg_atlas' object with 2D polygon

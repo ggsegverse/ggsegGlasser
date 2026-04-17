@@ -1,34 +1,74 @@
 # ggsegGlasser
 
-Glasser Atlas for the ggsegverse Ecosystem.
+\<!DOCTYPE html\>
+
+readme
+
+This repository contains an R package with atlas data for ggseg and
+ggseg3d for the Glasser parcellation for HPC.
+
+Glasser et al. (2016) Nature, volume 536, pages 171-178
+[pubmed](https://www.nature.com/articles/nature18933)
+
+To learn how to use these atlases, please look at the documentation for
+[ggseg](https://ggseg.github.io/ggseg/) and
+[ggseg3d](https://ggseg.github.io/ggseg3d).
 
 ## Installation
 
-``` r
-# From r-universe
-install.packages("ggsegGlasser", repos = "https://ggsegverse.r-universe.dev")
+We recommend installing the ggseg-atlases through the ggseg
+[r-universe](https://ggseg.r-universe.dev/ui#builds):
 
-# From GitHub
+``` r
+options(
+  repos = c(
+    ggseg = "https://ggseg.r-universe.dev",
+    CRAN = "https://cloud.r-project.org"
+  )
+)
+
+install.packages("ggsegGlasser")
+```
+
+And the development version from [GitHub](https://github.com/) with:
+
+``` r
 # install.packages("remotes")
-remotes::install_github("ggsegverse/ggsegGlasser")
+remotes::install_github("ggseg/ggsegGlasser")
 ```
 
-## Atlases
-
-### glasser
-
-HCP Multi-Modal Parcellation with 180 regions per hemisphere.
+## Example
 
 ``` r
+library(ggseg)
 library(ggsegGlasser)
-plot(glasser())
+library(ggplot2)
+
+ggplot() +
+  geom_brain(
+    atlas = glasser(),
+    mapping = aes(fill = label),
+    position = position_brain(hemi ~ view),
+    show.legend = FALSE
+  ) +
+  scale_fill_manual(values = glasser()$palette, na.value = "grey") +
+  theme_void()
 ```
 
-![](reference/figures/README-glasser-1.png) \## Data source
+![](reference/figures/README-2d-plot-1.png)
+
+``` r
+library(ggseg3d)
+
+ggseg3d(atlas = glasser()) |>
+  pan_camera("right lateral")
+```
+
+![](reference/figures/README-3d-plot.png)
+
+## Data source
 
 HCP-MMP1 annotation files (fsaverage space, resampled to fsaverage5).
 
 - **Reference**: Glasser et al. (2016)
   [doi:10.1038/nature18933](https://doi.org/10.1038/nature18933)
-
-- **Date obtained**: 2020-11-18

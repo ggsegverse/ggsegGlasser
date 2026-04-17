@@ -402,4 +402,5 @@ glasser()
 #> 358 right PI     rh_R_PI_ROI    
 #> 359 right a32pr  rh_R_a32pr_ROI 
 #> 360 right p24    rh_R_p24_ROI   
+plot(glasser())
 ```
