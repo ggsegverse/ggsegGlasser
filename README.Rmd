@@ -1,7 +1,3 @@
----
-format: gfm
----
-
 <!-- README.md is generated from README.qmd. Please edit that file -->
 
 ```{r}
@@ -21,8 +17,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![DOI](https://zenodo.org/badge/250278991.svg)](https://zenodo.org/badge/latestdoi/250278991)
-[![CRAN status](https://www.r-pkg.org/badges/version/ggsegGlasser)](https://CRAN.R-project.org/package=ggsegGlasser)
-[![R-CMD-check](https://github.com/ggseg/ggsegGlasser/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ggseg/ggsegGlasser/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/ggsegverse/ggsegGlasser/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ggsegverse/ggsegGlasser/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 This repository contains an R package with atlas data for ggseg and ggseg3d for the Glasser parcellation for HPC.
