@@ -13,7 +13,7 @@
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.5.2 (2025-10-31)",
+  "runtimePlatform": "R version 4.5.3 (2026-03-11)",
   "author": [
     {
       "@type": "Person",
@@ -50,7 +50,7 @@
         "name": "Comprehensive R Archive Network (CRAN)",
         "url": "https://cran.r-project.org"
       },
-      "sameAs": "https://CRAN.R-project.org/package=ggseg"
+      "sameAs": "https://github.com/ggsegverse/ggseg"
     },
     {
       "@type": "SoftwareApplication",
@@ -147,5 +147,8 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "NAKB"
+  "fileSize": "8951.7KB",
+  "releaseNotes": "https://github.com/ggsegverse/ggsegGlasser/blob/main/NEWS.md",
+  "readme": "https://github.com/ggsegverse/ggsegGlasser/blob/main/README.md",
+  "contIntegration": "https://github.com/ggsegverse/ggsegGlasser/actions/workflows/R-CMD-check.yaml"
 }
