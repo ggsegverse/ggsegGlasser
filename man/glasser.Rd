@@ -16,6 +16,7 @@ Contains 2D polygon geometry for \code{\link[ggseg:ggbrain]{ggseg::geom_brain()}
 }
 \examples{
 glasser()
+plot(glasser())
 }
 \references{
 Glasser MF, Coalson TS, Robinson EC, Hacker CD, Harwell J,
@@ -24,4 +25,5 @@ Van Essen DC (2016). A multi-modal parcellation of human cerebral cortex.
 \emph{Nature}, 536(7615):171-178.
 \doi{10.1038/nature18933}
 }
+\concept{cortical_atlases}
 \concept{ggseg_atlases}
