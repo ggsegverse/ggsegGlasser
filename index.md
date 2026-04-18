@@ -1,18 +1,12 @@
 # ggsegGlasser
 
-\<!DOCTYPE html\>
+This package contains the Glasser HCP multimodal parcellation atlas for
+ggseg.
 
-readme
-
-This repository contains an R package with atlas data for ggseg and
-ggseg3d for the Glasser parcellation for HPC.
-
-Glasser et al. (2016) Nature, volume 536, pages 171-178
-[pubmed](https://www.nature.com/articles/nature18933)
-
-To learn how to use these atlases, please look at the documentation for
-[ggseg](https://ggseg.github.io/ggseg/) and
-[ggseg3d](https://ggseg.github.io/ggseg3d).
+Glasser MF, Coalson TS, Robinson EC, Hacker CD, Harwell J, Yacoub E,
+Ugurbil K, Andersson J, Beckmann CF, Jenkinson M, Smith SM, & Van Essen
+DC (2016). A multi-modal parcellation of human cerebral cortex.
+*Nature*, 536, 171-178.
 
 ## Installation
 
@@ -20,24 +14,22 @@ We recommend installing the ggseg-atlases through the ggseg
 [r-universe](https://ggseg.r-universe.dev/ui#builds):
 
 ``` r
-options(
-  repos = c(
-    ggseg = "https://ggseg.r-universe.dev",
-    CRAN = "https://cloud.r-project.org"
-  )
-)
+options(repos = c(
+  ggseg = "https://ggseg.r-universe.dev",
+  CRAN = "https://cloud.r-project.org"
+))
 
 install.packages("ggsegGlasser")
 ```
 
-And the development version from [GitHub](https://github.com/) with:
+You can install this package from [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("remotes")
-remotes::install_github("ggseg/ggsegGlasser")
+# install.packages("pak")
+pak::pak("ggsegverse/ggsegGlasser")
 ```
 
-## Example
+## Glasser atlas
 
 ``` r
 library(ggseg)
@@ -55,20 +47,11 @@ ggplot() +
   theme_void()
 ```
 
-![](reference/figures/README-2d-plot-1.png)
-
-``` r
-library(ggseg3d)
-
-ggseg3d(atlas = glasser()) |>
-  pan_camera("right lateral")
-```
-
-![](reference/figures/README-3d-plot.png)
+![](reference/figures/README-glasser-1.png)
 
 ## Data source
 
-HCP-MMP1 annotation files (fsaverage space, resampled to fsaverage5).
-
-- **Reference**: Glasser et al. (2016)
-  [doi:10.1038/nature18933](https://doi.org/10.1038/nature18933)
+Glasser MF, Coalson TS, Robinson EC, Hacker CD, Harwell J, Yacoub E,
+Ugurbil K, Andersson J, Beckmann CF, Jenkinson M, Smith SM, & Van Essen
+DC (2016). A multi-modal parcellation of human cerebral cortex.
+*Nature*, 536, 171-178.
