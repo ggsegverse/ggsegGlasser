@@ -59,6 +59,7 @@ pak::pak("ggsegverse/ggsegGlasser")
 #| label: glasser
 #| fig-height: 7
 library(ggseg)
+library(ggsegGlasser)
 
 plot(glasser())
 ```
