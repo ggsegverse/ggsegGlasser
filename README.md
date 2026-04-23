@@ -1,23 +1,22 @@
 
+
 <!-- README.md is generated from README.qmd. Please edit that file -->
 
 # ggsegGlasser <img src='man/figures/logo.png' align="right" height="138.5" />
 
 <!-- badges: start -->
 
-[![DOI](https://zenodo.org/badge/250278991.svg)](https://zenodo.org/badge/latestdoi/250278991)
 [![R-CMD-check](https://github.com/ggsegverse/ggsegGlasser/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ggsegverse/ggsegGlasser/actions/workflows/R-CMD-check.yaml)
+[![r-universe](https://ggseg.r-universe.dev/badges/ggsegGlasser.png)](https://ggseg.r-universe.dev/ggsegGlasser)
 <!-- badges: end -->
 
-This repository contains an R package with atlas data for ggseg and
-ggseg3d for the Glasser parcellation for HPC.
+This package contains the Glasser HCP multimodal parcellation atlas for
+ggseg.
 
-Glasser et al. (2016) Nature, volume 536, pages 171-178
-[pubmed](https://www.nature.com/articles/nature18933)
-
-To learn how to use these atlases, please look at the documentation for
-[ggseg](https://ggseg.github.io/ggseg/) and
-[ggseg3d](https://ggseg.github.io/ggseg3d).
+Glasser MF, Coalson TS, Robinson EC, Hacker CD, Harwell J, Yacoub E,
+Ugurbil K, Andersson J, Beckmann CF, Jenkinson M, Smith SM, & Van Essen
+DC (2016). A multi-modal parcellation of human cerebral cortex.
+*Nature*, 536, 171-178.
 
 ## Installation
 
@@ -25,46 +24,44 @@ We recommend installing the ggseg-atlases through the ggseg
 [r-universe](https://ggseg.r-universe.dev/ui#builds):
 
 ``` r
-options(
-  repos = c(
-    ggseg = "https://ggseg.r-universe.dev",
-    CRAN = "https://cloud.r-project.org"
-  )
-)
+options(repos = c(
+  ggseg = "https://ggseg.r-universe.dev",
+  CRAN = "https://cloud.r-project.org"
+))
 
 install.packages("ggsegGlasser")
 ```
 
-And the development version from [GitHub](https://github.com/) with:
+You can install this package from [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("remotes")
-remotes::install_github("ggseg/ggsegGlasser")
+# install.packages("pak")
+pak::pak("ggsegverse/ggsegGlasser")
 ```
 
-## Example
+## Glasser atlas
 
 ``` r
 library(ggseg)
 library(ggsegGlasser)
+library(ggplot2)
 
-plot(glasser())
+ggplot() +
+  geom_brain(
+    atlas = glasser(),
+    mapping = aes(fill = label),
+    position = position_brain(hemi ~ view),
+    show.legend = FALSE
+  ) +
+  scale_fill_manual(values = glasser()$palette, na.value = "grey") +
+  theme_void()
 ```
 
-<img src="man/figures/README-2d-plot-1.png" alt="" width="100%" />
-
-``` r
-library(ggseg3d)
-
-ggseg3d(atlas = glasser()) |>
-  pan_camera("right lateral")
-```
-
-<img src="man/figures/README-3d-plot.png" alt="" width="100%" />
+<img src="man/figures/README-glasser-1.png" style="width:100.0%" />
 
 ## Data source
 
-HCP-MMP1 annotation files (fsaverage space, resampled to fsaverage5).
-
-- **Reference**: Glasser et al. (2016)
-  [doi:10.1038/nature18933](https://doi.org/10.1038/nature18933)
+Glasser MF, Coalson TS, Robinson EC, Hacker CD, Harwell J, Yacoub E,
+Ugurbil K, Andersson J, Beckmann CF, Jenkinson M, Smith SM, & Van Essen
+DC (2016). A multi-modal parcellation of human cerebral cortex.
+*Nature*, 536, 171-178.
