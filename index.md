@@ -34,17 +34,8 @@ pak::pak("ggsegverse/ggsegGlasser")
 ``` r
 library(ggseg)
 library(ggsegGlasser)
-library(ggplot2)
 
-ggplot() +
-  geom_brain(
-    atlas = glasser(),
-    mapping = aes(fill = label),
-    position = position_brain(hemi ~ view),
-    show.legend = FALSE
-  ) +
-  scale_fill_manual(values = glasser()$palette, na.value = "grey") +
-  theme_void()
+plot(glasser())
 ```
 
 ![](reference/figures/README-glasser-1.png)
