@@ -14,18 +14,11 @@ describe("glasser atlas", {
 
   it("renders with ggseg", {
     skip_if_not_installed("ggseg")
-    skip_if_not_installed("ggplot2")
     skip_if_not_installed("vdiffr")
-    p <- ggplot() +
-      geom_brain(
-        atlas = glasser(),
-        mapping = aes(fill = label),
-        position = position_brain(hemi ~ view),
-        show.legend = FALSE
-      ) +
-      scale_fill_manual(values = glasser()$palette, na.value = "grey") +
-      theme_void()
-    vdiffr::expect_doppelganger("glasser-2d", p)
+    vdiffr::expect_doppelganger(
+      "glasser-2d",
+      ggseg::brain_test_plot(glasser())
+    )
   })
 
   it("renders with ggseg3d", {
