@@ -12,3 +12,5 @@
 ^\.github$
 ^README\.qmd$
 ^codemeta\.json$
+\.DS_Store$
+^\.claude$
