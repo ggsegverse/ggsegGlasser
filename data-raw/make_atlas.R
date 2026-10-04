@@ -28,7 +28,6 @@ glasser <- create_cortical_from_annotation(
   input_annot = annot_files,
   atlas_name = "glasser",
   output_dir = "data-raw",
-  tolerance = 0,
   skip_existing = TRUE,
   cleanup = FALSE
 ) |>
