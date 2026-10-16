@@ -28,14 +28,12 @@ glasser <- create_cortical_from_annotation(
   input_annot = annot_files,
   atlas_name = "glasser",
   output_dir = "data-raw",
-  tolerance = 0,
   skip_existing = TRUE,
   cleanup = FALSE
 ) |>
-  atlas_region_contextual("^$|unknown", "label")
-
-glasser$core$region <- gsub("^[LR]_", "", glasser$core$region) |>
-  gsub("_ROI$", "", x = _)
+  # `region` is derived from the label, so it arrives as "v1 roi"; the source
+  # suffix carries no information. `display` keeps the full "L_V1_ROI".
+  atlas_region_rename(" roi$", "", match_on = "region")
 
 print(glasser)
 plot(glasser)
