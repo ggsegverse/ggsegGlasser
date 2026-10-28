@@ -13,7 +13,7 @@
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.6.0 (2026-04-24)",
+  "runtimePlatform": "R version 4.6.1 (2026-06-24)",
   "author": [
     {
       "@type": "Person",
@@ -143,11 +143,11 @@
         "name": "Comprehensive R Archive Network (CRAN)",
         "url": "https://cran.r-project.org"
       },
-      "sameAs": "https://CRAN.R-project.org/package=ggseg.formats"
+      "sameAs": "https://github.com/ggsegverse/ggseg.formats"
     },
     "SystemRequirements": null
   },
-  "fileSize": "9495.027KB",
+  "fileSize": "9494.79KB",
   "releaseNotes": "https://github.com/ggsegverse/ggsegGlasser/blob/main/NEWS.md",
   "readme": "https://github.com/ggsegverse/ggsegGlasser/blob/main/README.md",
   "contIntegration": "https://github.com/ggsegverse/ggsegGlasser/actions/workflows/R-CMD-check.yaml"
